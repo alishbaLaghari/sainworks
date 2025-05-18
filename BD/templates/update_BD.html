@@ -1,0 +1,27 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update BD Details</title>
+    <link rel="stylesheet" href="{% static 'update_details.css' %}">
+
+  
+</head>
+<body>
+    <div class="container">
+        <h1>Update BD Details</h1>
+        <form action="{% url 'update_BD' id=BD.id %}" method="POST">
+            {% csrf_token %}
+            <label for="update_BD_email">Email:</label>
+            <input type="email" id="update_BD_email" name="update_BD_email" value="{{ BD.add_BD_email }}" required>
+            <label for="update_BD_username">Username:</label>
+            <input type="text" id="update_BD_username" name="update_BD_username" value="{{ BD.add_BD_username }}" required>
+            <label for="update_BD_password">Password:</label>
+            <input type="password" id="update_BD_password" name="update_BD_password" value="{{ BD.add_BD_password }}" required>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+</body>
+</html>

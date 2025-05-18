@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+body {
+    background-color: #D3D1DB;
+    font-family: Open Sans;
+}
+
+.tag {
+    font-size: 30px;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;   
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+.top-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+}
+
+.bottom {
+    display: flex;
+    color: black;
+    flex-direction: row;
+    font-size: 25px;
+    gap: 7rem;
+    margin-bottom: -170px;
+    position: relative;
+    top: -100px;
+    left: -25px;
+    margin-left: 25px;
+    height: 40px;
+    width: 180px;
+    padding-top: 10px;
+    padding-left: 20px;
+    border-radius: 24px;
+    background-color: #C6C4D0;
+}
+
+.dashboard {
+    height: 100vh;
+    width: 100%;
+}
+
+.icons {
+    cursor: pointer;
+}
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Apply the fade-out class */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+select {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    width: 14rem;
+    border: none;
+    margin: 2rem;
+    outline: none;
+    border-radius: 1rem;
+   
+}
+
+select, option #title {
+    background-color: #CED2DE;
+}
+
+.container {
+    width: 250px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #d3d6e1;
+}
+.title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.input-container {
+    margin-top: 10px;
+}
+.input-container input {
+    width: 100%;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.container2 {
+    width: 250px;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #d3d6e1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.title2 {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.input-container2 {
+    background-color: #fff;
+    padding: 23px;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.input-container2 input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.progress {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    padding-top: 3rem;
+}
+
+.task-done {
+    margin-top: 1.5rem;
+}
+.details {
+    margin-top: 1.1rem;
+}
+
+.progress-bar {
+    width: 70%;
+    height: 30px;
+    background-color: #dfd4d4;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10rem;
+    margin-left: 10rem;
+  }
+  
+  .progress-fill {
+    width: 50%;
+    height: 100%;
+    background-color: #4CAF50;
+  }
+
+  #progress {
+    margin-top: 4rem;
+  }
+
+  .style-left {
+    margin-top: 30px;
+    background-color: #C6C4D0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    font-size: 20px;
+    padding: 20px;
+    width: 11rem;
+    border-radius: 20px;
+    height: 250px;
+}
+
+/* #dashboard:hover {
+    background-color: black;
+    color: white;
+    margin-top: -1rem;
+    padding: 1rem;
+    padding-bottom: 1.4rem;
+    height: 13px;
+    width: 10.7rem;
+    border-radius: 1.7rem;
+    margin-left: -1rem;   
+} */
+
+.style-left i {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.icons {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+/* .icons:hover {
+    color: white;
+}
+
+.style-left div {
+    color: black;
+}
+.style-left div :hover{
+    color:white;
+} */
+
+.right-style {
+    background-color: #fff;
+    height: 35rem;
+    width: 75rem;
+    margin-left: 5px;
+    border-radius: 20px;
+    margin-top: 30px;
+    position: relative;
+    left: 3.3rem;
+}
+
+.style {
+    display: flex;
+    
+}
+
+.icons p {
+    font-weight: bolder;
+    margin-top: -0.2rem;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+#anchor {
+    text-decoration: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    padding-left: 0.8rem;
+    padding-right: 0.5rem;
+}
+
+.style-left{
+    width: 11.5rem;
+    height: 19rem;
+}
+
+input {
+    outline: none;
+}
+
+#anchor:hover {
+    background-color: #a4a2b1;
+    padding-top: 1rem;
+    border-radius: 3rem;
+    width: 10.5rem;
+    margin-top: -1rem;
+}

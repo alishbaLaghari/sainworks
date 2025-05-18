@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <link rel="stylesheet" href="{% static 'employee_details.css' %}">
+<div class="container">
+
+    <style>
+        .black-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            text-decoration: none; /* Remove default anchor underline */
+            display: inline-block; /* Make it inline-block to respect padding */
+        }
+        .black-btn:hover {
+            background-color: #333;
+        }
+    </style>
+
+    <h1>Employee details</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Actions</th>
+        </tr>
+        {% for employee in employees %}
+        <tr>
+            <td>{{ employee.id }}</td>
+            <td>{{ employee.add_employee_email }}</td>
+            <td>{{ employee.add_employee_username }}</td>
+            <td>{{ employee.add_employee_password }}</td>
+            <td>
+                <div class="action-buttons">
+                    <a href="{% url 'update_employee' employee.id %}" class="button">Edit</a>
+                    <a href="{% url 'delete_employee' employee.id %}" class="button">Delete</a>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/mainadmin" class="black-btn">Back to Admin</a>
+</div>

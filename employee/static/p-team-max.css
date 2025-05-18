@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+body {
+    background-color: #D3D1DB;
+    font-family: Open Sans;
+}
+
+.tag {
+    font-size: 30px;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;   
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+.top-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+}
+
+.style-left {
+    margin-top: 30px;
+    background-color: #C6C4D0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 20px;
+    padding: 20px;
+    width: 30px;
+    border-radius: 20px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.style-left i {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.style-left i:hover {
+    border-radius: 8px;
+    font-size: 25px;
+    transform: scale(1.2);
+}
+
+.right-style {
+    background-color: #fff;
+    height: 36rem;
+    width: 85rem;
+    margin-left: 30px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.style {
+    display: flex;
+    
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    gap: 16px;
+    margin-bottom: -170px;
+    position: relative;
+    top: -100px;
+    left: -25px;
+    margin-left: 25px;
+    height: 80px;
+    width: 50px;
+    padding-top: 10px;
+    padding-left: 20px;
+    border-radius: 24px;
+    background-color: #C6C4D0;
+}
+
+.dashboard {
+    height: 100vh;
+    width: 100%;
+}
+
+.icons {
+    cursor: pointer;
+}
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Apply the fade-out class */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+.client-img {
+    background-image: url("./images/client-img.jpg");
+    background-position: center;
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    border-radius: 3rem;
+    border: 2px solid black;
+    margin-top: 0.79rem;
+}
+
+.team {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem;
+    height: 70px;
+    width: 20rem;
+    background-color: #CBD7EE;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.info p {
+    margin-top: -1rem;
+    color: #2E367B;
+    
+}
+
+.info {
+    margin-top: -0.5rem;
+}
+
+.clients {
+   margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 70rem;
+    margin-left: 6.6rem;
+}

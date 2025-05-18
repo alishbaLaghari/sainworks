@@ -1,0 +1,101 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+    <link rel="stylesheet" href="{% static 'p-team.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="dashboard">
+    <div class="header">
+    <div class="tag">SAINWORK</div>
+    <div class="top-icons">
+        <i class="fa fa-github" aria-hidden="true"></i>
+        <i class="fa fa-bell" aria-hidden="true"></i>
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+    </div>
+</div>
+
+    <div class="style">
+        <div class="style-left">
+
+            <a id="anchor" href="P-dashboard.html" target="chat">   
+                <div id="dashboard" class="icons">
+                <i class="fa fa-desktop" aria-hidden="true"></i>
+                <p>DASHBOARD</p>
+            </div>
+            </a>
+            <a id="anchor" href="P-chat.html" target="chat"> 
+            <div id="dashboard"  class="icons">
+            <i  class="fa fa-comments-o" aria-hidden="true"></i>
+            <p>CHAT</p>
+        </div>
+            <a id="anchor" href="P-team.html" target="chat"> 
+            <div id="dashboard"  class="icons">
+            <i class="fa fa-users" aria-hidden="true"></i>
+            <p>TEAM</p>
+        </div>
+        </a>
+        <a id="anchor" href="P-progress.html" target="chat"> 
+            <div class="icons">
+                <i id="black" class="fa fa-tasks" aria-hidden="true"></i>
+            <p>PROGRESS</p>
+        </div>
+        </a>
+        <a id="anchor" href="P-comments.html" target="chat"> 
+            <div class="icons">
+            <i class="fa fa-commenting-o" aria-hidden="true"></i>
+            <p>COMMENTS</p>
+        </div>
+        </a>
+        </div>
+
+<div class="right-style">
+    <div class="clients">
+        <div class="container">
+            <h2 style="color: white;">Projects</h2>
+            {% for project in projects %}
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">{{ project.project_name }}</h4>
+                    <p class="card-text">Manager: {{ project.project_manager }}</p>
+                    <p class="card-text">Type: {{ project.project_type }}</p>
+                    <p class="card-text">Start Date: {{ project.start_date }}</p>
+                    <p class="card-text">End Date: {{ project.end_date }}</p>
+                    <p class="card-text">Milestones: {{ project.milestones }}</p>
+                    <p class="card-text">Description: {{ project.description }}</p>
+                    <h5 class="card-title">Tasks:</h5>
+                    <ul>
+                        {% for task in tasks %}
+                        {% if task.project.project_name == project.project_name %}
+                        <li>
+                            <p>Team Member: {{ task.team_member }}</p>
+                            <p>Task: {{ task.task_to_be_allotted }}</p>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="bottom">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <i class="fa fa-cog" aria-hidden="true"></i>
+</div>
+</div>
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+body {
+    background-color: #D3D1DB;
+    font-family: Open Sans;
+    overflow-y: hidden;
+}
+
+.tag {
+    font-size: 30px;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;   
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+.top-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+}
+
+.style-left {
+    margin-top: 30px;
+    background-color: #C6C4D0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    font-size: 20px;
+    padding: 20px;
+    width: 10.3rem;
+    border-radius: 20px;
+    height: 455px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+#chat {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    padding-bottom: 1.4rem;
+    height: 11px;
+    width: 155px;
+    border-radius: 1.7rem;
+    margin-left: -1rem;
+}
+.style-left i {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.right-style {
+    background-color: #fff;
+    height: 36rem;
+    width: 75rem;
+    margin-left: 5px;
+    border-radius: 20px;
+    margin-top: 20px;
+    position: relative;
+    left: 3.3rem;
+}
+
+.style {
+    display: flex;
+    
+}
+
+.bottom {
+    display: flex;
+    font-size: 25px;
+    gap: 90px;
+    margin-bottom: -290px;
+    position: relative;
+    top: -100px;
+    left: -25px;
+    margin-left: 25px;
+    height: 40px;
+    width: 10rem;
+    padding-top: 10px;
+    padding-left: 25px;
+    border-radius: 24px;
+    background-color: #C6C4D0;   
+}
+
+.dashboard {
+    height: 100vh;
+    width: 100%;
+}
+
+.style-center {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.8rem;
+    margin-left: 0.5rem;
+    font-size: 1.3rem;
+}
+
+input {
+    font-size: 1.1rem;
+    width: 8.9rem;
+    background-color: #ffffff;
+    color:rgb(235, 220, 220);
+    padding: 0.2rem;
+    margin-top: 2rem;
+    margin-left: 0.7rem;
+    padding-left: 1.7rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.icon i {
+    background-color: #D7D3EE;
+    padding: 0.19rem;
+    border-radius: 0.3rem;
+    margin-top: 2rem;
+}
+
+
+.team {
+    background-color: #9890C1;
+    border-radius: 1rem;
+    padding-top: 1rem;
+    padding: 1rem;
+    color: white;
+    position: relative;
+    top: 0.7rem;
+}
+
+
+.client {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-left: 1.4rem;
+    background-color: #D7D3EE;
+    width: 18rem;
+    padding: 0.5rem;
+    margin-top: 1.1rem;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+}
+
+.team-client {
+    display: flex;
+    flex-direction: row;
+}
+
+.chat-style {
+    margin-top: -1.9rem;
+    width: 15.3rem;
+    height: 36rem;
+    background-color: #201E5C;
+    border-radius: 2.5rem;
+}
+
+.users {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-top: 2rem;
+    margin-top: -1rem;
+    gap: 1.4rem;
+    margin-left: 2rem;
+}
+
+.user i {
+    margin-top: 1.4rem;
+    font-size: 2.2rem;
+}
+
+.info h3 {
+    font-family: "Bebas Neue", sans-serif;
+    color: #CFCAE5;
+}
+
+.info span {
+    position: relative;
+    top: -1rem;
+    color: #CFCAE5;
+    font-family: "Catamaran", sans-serif;
+}
+
+hr {
+    width: 12rem;
+    border-color: #CFCAE5;
+    margin-top: -0.1rem;
+}
+
+.groups {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.7rem;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.icons p {
+    font-weight: bolder;
+    margin-top: -0.2rem;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+#white {
+    color: white;
+}
+
+.button-group {
+    padding-left: 2.3rem;
+    display: flex;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-top: 1rem
+}
+
+#chat {
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+.button {
+    background-color: #c8c8e0; 
+    color: #2c2c5e; 
+    padding: 0.8rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    border-radius: 15px 0 0 15px;
+}
+
+.button:not(:first-child) {
+    border-radius: 15px;
+}
+
+.button:not(:last-child) {
+    border-radius: 15px;
+}
+
+.button.active {
+    background-color: #9890C1;
+    border-radius: 1rem;
+    color: #ffffff;
+}
+
+.button:hover {
+    background-color: #6b6b9f; 
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Apply the fade-out class */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+.new-project {
+    font-family: "Roboto", sans-serif;
+    margin: 1.4rem;
+    font-weight: 700;
+    padding: -2rem;
+}
+
+.project {
+    margin-top: -1.2rem ;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    padding-left: 0.8rem;
+    padding-right: 0.5rem;
+}
+
+.style-left{
+    width: 11.5rem;
+    height: 19rem;
+}
+
+input {
+    outline: none;
+}
+
+#anchor:hover {
+    background-color: #a4a2b1;
+    padding-top: 1rem;
+    border-radius: 3rem;
+    width: 10.5rem;
+    margin-top: -1rem;
+}

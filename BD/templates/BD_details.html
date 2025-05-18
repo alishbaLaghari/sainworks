@@ -1,0 +1,54 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BD Details</title>
+    <link rel="stylesheet" href="{% static 'employee_details.css' %}">
+<div class="container">
+
+    <style>
+        .black-btn {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            text-decoration: none; /* Remove default anchor underline */
+            display: inline-block; /* Make it inline-block to respect padding */
+        }
+        .black-btn:hover {
+            background-color: #333;
+        }
+    </style>
+
+    <h1>BD details</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Actions</th>
+        </tr>
+        {% for BD in BDs %}
+        <tr>
+            <td>{{ BD.id }}</td>
+            <td>{{ BD.add_BD_email }}</td>
+            <td>{{ BD.add_BD_username }}</td>
+            <td>{{ BD.add_BD_password }}</td>
+            <td>
+                <div class="action-buttons">
+                    <a href="{% url 'update_BD' BD.id %}" class="button">Edit</a>
+                    <a href="{% url 'delete_BD' BD.id %}" class="button">Delete</a>
+                </div>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/mainadmin" class="black-btn">Back to Admin</a>
+</div>

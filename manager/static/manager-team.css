@@ -1,0 +1,407 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+body {
+    background-color: #D3D1DB;
+    font-family: Open Sans;
+}
+
+.tag {
+    font-size: 30px;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;   
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+.top-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+}
+
+.style-left {
+    margin-top: 30px;
+    background-color: #C6C4D0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    font-size: 20px;
+    padding: 20px;
+    width: 10.3rem;
+    border-radius: 20px;
+    height: 455px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+#chat {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    padding-bottom: 1.4rem;
+    height: 11px;
+    width: 155px;
+    border-radius: 1.7rem;
+    margin-left: -1rem;
+}
+.style-left i {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.right-style {
+    background-color: #fff;
+    height: 36rem;
+    width: 75rem;
+    margin-left: 5px;
+    border-radius: 20px;
+    margin-top: 20px;
+    position: relative;
+    left: 3.3rem;
+}
+
+.style {
+    display: flex;
+    
+}
+
+.bottom {
+    display: flex;
+    font-size: 25px;
+    gap: 90px;
+    margin-bottom: -290px;
+    position: relative;
+    top: -100px;
+    left: -25px;
+    margin-left: 25px;
+    height: 40px;
+    width: 10rem;
+    padding-top: 10px;
+    padding-left: 25px;
+    border-radius: 24px;
+    background-color: #C6C4D0;   
+}
+
+.dashboard {
+    height: 100vh;
+    width: 100%;
+}
+
+.style-center {
+    display: flex;
+    flex-direction: row;
+    margin-top: 1.8rem;
+    margin-left: 0.5rem;
+    font-size: 1.3rem;
+}
+
+input {
+    font-size: 1.1rem;
+    width: 8.9rem;
+    background-color: #ffffff;
+    color:rgb(235, 220, 220);
+    padding: 0.2rem;
+    margin-top: 2rem;
+    margin-left: 0.7rem;
+    padding-left: 1.7rem;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.icon i {
+    background-color: #D7D3EE;
+    padding: 0.19rem;
+    border-radius: 0.3rem;
+    margin-top: 2rem;
+}
+
+
+.team {
+    background-color: #9890C1;
+    border-radius: 1rem;
+    padding-top: 1rem;
+    padding: 1rem;
+    color: white;
+    position: relative;
+    top: 0.7rem;
+}
+
+
+.client {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-left: 1.4rem;
+    background-color: #D7D3EE;
+    width: 18rem;
+    padding: 0.5rem;
+    margin-top: 1.1rem;
+    border-radius: 2rem;
+    font-size: 1.3rem;
+}
+
+.team-client {
+    display: flex;
+    flex-direction: row;
+}
+
+.chat-style {
+    margin-top: -1.9rem;
+    width: 15.3rem;
+    height: 36rem;
+    background-color: #201E5C;
+    border-radius: 2.5rem;
+}
+
+.users {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    margin-top: 2rem;
+    margin-top: -1rem;
+    gap: 1.4rem;
+    margin-left: 2rem;
+}
+
+.user i {
+    margin-top: 1.4rem;
+    font-size: 2.2rem;
+}
+
+.info h3 {
+    font-family: "Bebas Neue", sans-serif;
+    color: #CFCAE5;
+}
+
+.info span {
+    position: relative;
+    top: -1rem;
+    color: #CFCAE5;
+    font-family: "Catamaran", sans-serif;
+}
+
+hr {
+    width: 12rem;
+    border-color: #CFCAE5;
+    margin-top: -0.1rem;
+}
+
+.groups {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.7rem;
+}
+
+.icons {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+.icons p {
+    font-weight: bolder;
+    margin-top: -0.2rem;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+#white {
+    color: white;
+}
+
+.button-group {
+    padding-left: 2.3rem;
+    display: flex;
+    border-radius: 25px;
+    overflow: hidden;
+    margin-top: 1rem
+}
+
+#chat {
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+}
+.button {
+    background-color: #c8c8e0; 
+    color: #2c2c5e; 
+    padding: 0.8rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    border-radius: 15px 0 0 15px;
+}
+
+.button:not(:first-child) {
+    border-radius: 15px;
+}
+
+.button:not(:last-child) {
+    border-radius: 15px;
+}
+
+.button.active {
+    background-color: #9890C1;
+    border-radius: 1rem;
+    color: #ffffff;
+}
+
+.button:hover {
+    background-color: #6b6b9f; 
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Apply the fade-out class */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+.team-info {
+    font-family: "Roboto", sans-serif;
+    margin: 1.4rem;
+    font-weight: 700;
+}
+
+.members {
+    padding: 0.2rem;
+    text-align: center;
+    margin-top: 1.5rem;
+    height: 25rem;
+    width: 18rem;
+    background-color: #d4d4fc;
+    border-radius: 3rem;
+}
+
+.member h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    padding-left: 0.8rem;
+    padding-right: 0.5rem;
+}
+
+.style-left{
+    width: 11.5rem;
+}
+
+#anchor:hover {
+    background-color: #a4a2b1;
+    padding-top: 1rem;
+    border-radius: 3rem;
+    width: 10.5rem;
+    margin-top: -1rem;
+}
+.card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+.task-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.task-list li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.card
+{
+    display: flex;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping */
+    overflow-x: auto; /* Enables horizontal scroll if needed */
+    gap: 20px; /* Adjust spacing between cards */
+    padding-bottom: 20px; /* Adds bottom padding to ensure space for scroll */
+    margin-bottom: -20px; /* Counteracts the gap for the last item */
+}
+
+.col-md-4 {
+    flex: 0 0 auto; /* Ensures fixed width for each card */
+    width: calc(33.33% - 20px); /* Adjust card width based on 3 cards per row */
+    max-width: calc(33.33% - 20px); /* Maximum width for each card */
+}
+
+.project-card {
+    background-color: #f9f9f9; /* Light background color */
+    border: 1px solid #e0e0e0; /* Soft border */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensures border-radius works properly */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%; /* Ensures all cards are of equal height */
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Lifts the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Larger shadow on hover */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333; /* Darker text color */
+}
+
+.card-text {
+    margin-bottom: 8px;
+    color: #666; /* Slightly darker text color */
+    line-height: 1.6; /* Improved readability with increased line height */
+}
+
+.table {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.delete-button {
+    width: 100%;
+    background-color: #ff6347; /* Coral red background */
+    border: none;
+    color: #fff; /* White text */
+    padding: 10px;
+    font-size: 0.9rem;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    text-transform: uppercase; /* Convert text to uppercase */
+    font-weight: bold; /* Bold text */
+    letter-spacing: 1px; /* Increased letter spacing */
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2); /* Text shadow for depth */
+}
+
+.delete-button:hover {
+    background-color: #e63946; /* Darker red on hover */
+}

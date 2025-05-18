@@ -1,0 +1,81 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAT</title>
+    <link rel="stylesheet" href="{% static 'bd-dashboard.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <div class="dashboard">
+    <div class="header">
+    <div class="tag">SAINWORK</div>
+    <div class="top-icons">
+        <i class="fa fa-github" aria-hidden="true"></i>
+        <i class="fa fa-bell" aria-hidden="true"></i>
+        <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+    </div>
+</div>
+
+   <div class="style">
+<div class="style-left">
+
+    <a id="anchor" href="bd-dashboard.html" target="chat">   
+        <div id="dashboard" class="icons">
+        <i class="fa fa-desktop" aria-hidden="true"></i>
+        <p>DASHBOARD</p>
+    </div>
+    </a>
+    <a id="anchor" href="{% url 'save_BD_msg' username=username %}" target="chat">
+    <div id="dashboard"  class="icons">
+    <i  class="fa fa-comments-o" aria-hidden="true"></i>
+    <p>CHAT</p>
+</div>
+</a>
+<a id="anchor" href="bd-comments.html" target="chat"> 
+    <div class="icons">
+    <i class="fa fa-commenting-o" aria-hidden="true"></i>
+    <p>COMMENTS</p>
+</div>
+</a>
+<a id="anchor" href="bd-team.html" target="chat"> 
+    <div class="icons">
+    <i class="fa fa-user-plus" aria-hidden="true"></i>
+    <p>REVIEWS</p>
+</div>
+</a>
+<a id="anchor" href="bd-submission.html" target="chat"> 
+    <div class="icons">
+    <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+    <p>SUBMISSION</p>
+</div>
+</a>
+<a id="anchor" href="bd-history.html" target="chat"> 
+    <div class="icons">
+        <i class="fa fa-history" aria-hidden="true"></i>
+    <p>HISTORY</p>
+</div>
+</a>
+</div>
+
+<div class="right-style">
+
+
+</div>
+</div>
+</div>
+
+
+<div class="bottom">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    <i class="fa fa-cog" aria-hidden="true"></i>
+</div>
+</div>
+
+
+<script src="{% static 'dashboard.js' %}"></script>
+</body>
+</html>

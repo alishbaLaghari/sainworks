@@ -1,0 +1,465 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+body {
+    background-color: #D3D1DB;
+    font-family: Open Sans;
+}
+
+.tag {
+    font-size: 30px;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;   
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+.top-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+}
+
+.style-left {
+    margin-top: 30px;
+    background-color: #C6C4D0;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    font-size: 20px;
+    padding: 20px;
+    width: 11rem;
+    border-radius: 20px;
+    height: 290px;
+}
+
+/* #dashboard:hover {
+    background-color: black;
+    color: white;
+    margin-top: -1rem;
+    padding: 1rem;
+    padding-bottom: 1.4rem;
+    height: 13px;
+    width: 10.7rem;
+    border-radius: 1.7rem;
+    margin-left: -1rem;   
+} */
+
+.style-left i {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.icons {
+    color: black;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+/* .icons:hover {
+    color: white;
+} */
+
+/* .style-left div {
+    color: black;
+}
+.style-left div :hover{
+    color:white;
+} */
+
+.right-style {
+    background-color: #fff;
+    height: 35rem;
+    width: 75rem;
+    margin-left: 5px;
+    border-radius: 20px;
+    margin-top: 30px;
+    position: relative;
+    left: 3.3rem;
+}
+
+.style {
+    display: flex;
+    
+}
+
+.bottom {
+    display: flex;
+    font-size: 25px;
+    gap: 90px;
+    margin-bottom: -170px;
+    position: relative;
+    top: -50px;
+    left: -25px;
+    margin-left: 25px;
+    height: 40px;
+    width: 10rem;
+    padding-top: 10px;
+    padding-left: 25px;
+    border-radius: 24px;
+    background-color: #C6C4D0;   
+}
+
+.dashboard {
+    height: 100vh;
+    width: 100%;
+}
+
+.icons p {
+    font-weight: bolder;
+    margin-top: -0.2rem;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.client-img {
+    background-image: url("./images/client-img.jpg");
+    background-position: center;
+    height: 40px;
+    width: 40px;
+    background-size: contain;
+    border-radius: 3rem;
+    border: 2px solid black;
+    margin-top: 0.79rem;
+}
+
+.team {
+    display: flex;
+    gap: 1rem;
+    margin: 2rem;
+    height: 70px;
+    width: 20rem;
+    background-color: #CBD7EE;
+    padding: 1rem;
+    border-radius: 2rem;
+}
+
+.info p {
+    margin-top: -1rem;
+    color: #2E367B;
+    
+}
+
+.info {
+    margin-top: -0.5rem;
+}
+
+.clients {
+   margin-top: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+    padding-left: 0.8rem;
+    padding-right: 0.5rem;
+}
+
+.style-left{
+    width: 11.5rem;
+    height: 19rem;
+}
+
+#anchor:hover {
+    background-color: #a4a2b1;
+    padding-top: 1rem;
+    border-radius: 3rem;
+    width: 10.5rem;
+    margin-top: -1rem;
+}
+
+input {
+    outline: none;
+}
+.container {
+    padding: 20px;
+}
+.card-container {
+    display: flex;
+    padding: 10px;
+    gap: 30px;
+}
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 270px;
+    transition: transform 0.3s;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card .client-img {
+    width: 50px;
+    height: 50px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+.card .info {
+    flex-grow: 1;
+}
+.card .info h4 {
+    margin: 0 0 10px;
+    font-size: 20px;
+    color: #333;
+}
+.card .info p {
+    margin: 5px 0;
+    color: #555;
+}
+h2 {
+    font-size: 24px;
+    margin: 20px 0;
+    text-align: center;
+    color: #333;
+}
+.container {
+    white-space: nowrap;
+}
+
+.container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: -20px;
+    margin-right: 800px;
+}
+
+.card {
+    display: inline-block;
+    background-color: #def3c8;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    top: -110px; /* Adjust the value to move the card up */
+    overflow: hidden;
+    margin-right: 20px; /* Adjust margin-right as needed */
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, #00c6ff, #0072ff);
+    opacity: 0.8;
+    z-index: -1;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover::before {
+    opacity: 0.6;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.card ul li {
+    margin-bottom: 8px;
+}
+
+.card ul li p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.card ul li:last-child {
+    margin-bottom: 0;
+}
+
+.right-style {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    white-space: nowrap; /* Prevent cards from wrapping */
+}
+
+.clients {
+    display: inline-block; /* Ensure inline-block for horizontal layout */
+    white-space: nowrap; /* Prevent cards from wrapping */
+}
+
+.card {
+    display: inline-block;
+    vertical-align: top; /* Align cards at the top */
+    background-color: #9af1a9;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin-right: 20px; /* Adjust margin between cards */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom right, #00c6ff, #0072ff);
+    opacity: 0.8;
+    z-index: -1;
+    border-radius: 10px;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover::before {
+    opacity: 0.6;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    color: #666;
+    margin-bottom: 15px;
+    line-height: 1.5;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.card ul li {
+    margin-bottom: 8px;
+}
+
+.card ul li p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.card ul li:last-child {
+    margin-bottom: 0;
+}
+/* Modal container */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* Modal content */
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    max-height: 70vh; /* Limit height and enable scrolling */
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* View Details button */
+.view-details-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.view-details-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Styling for task list in modal */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.task-list li {
+    margin-bottom: 10px;
+}
+
+.task-list li p {
+    margin: 5px 0;
+    color: #555;
+}

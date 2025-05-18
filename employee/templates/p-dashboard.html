@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAT</title>
+    <link rel="stylesheet" href="{% static 'p-dashboard.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .top-icons a {
+            color: black;
+            font-size: 20px;
+            margin-left: 15px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .top-icons a:hover {
+            color:white;
+        }
+
+        .top-icons a i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <div class="tag">SAINWORK</div>
+            <div class="top-icons">
+                <a href="https://github.com" target="_blank">
+                    <i class="fa fa-github" aria-hidden="true"></i>
+                </a>
+                <a href="">
+                    <i class="fa fa-bell" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="style">
+            <div class="style-left">
+                <a id="anchor" href="P-dashboard.html" target="chat">   
+                    <div id="dashboard" class="icons">
+                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                        <p>DASHBOARD</p>
+                    </div>
+                </a>
+                <a id="anchor" href="P-chat.html" target="chat"> 
+                    <div id="dashboard"  class="icons">
+                        <i class="fa fa-comments-o" aria-hidden="true"></i>
+                        <p>CHAT</p>
+                    </div>
+                </a>
+                <a id="anchor" href="{% url 'project_list' username=username %}" target="chat"> 
+                    <div id="dashboard"  class="icons">
+                        <i class="fa fa-users" aria-hidden="true"></i>
+                        <p>TEAM</p>
+                    </div>
+                </a>
+                <a id="anchor" href="P-progress.html" target="chat"> 
+                    <div class="icons">
+                        <i id="black" class="fa fa-tasks" aria-hidden="true"></i>
+                        <p>PROGRESS</p>
+                    </div>
+                </a>
+                <a id="anchor" href="{% url 'comments' username=username %}" target="chat"> 
+                    <div class="icons">
+                        <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                        <p>COMMENTS</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="right-style">
+                <!-- Content for the right side of the style div -->
+            </div>
+        </div>
+    </div>
+
+    <div class="bottom">
+        <i class="fa fa-arrow-left" aria-hidden="true"></i>
+        <i class="fa fa-cog" aria-hidden="true"></i>
+    </div>
+
+    <script src="{% static 'dashboard.js' %}"></script>
+</body>
+</html>

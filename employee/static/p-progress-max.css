@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+body {
+    background-color: #D3D1DB;
+    font-family: Open Sans;
+}
+
+.tag {
+    font-size: 30px;
+    font-family: "Zen Dots", sans-serif;
+    font-weight: 400;
+    font-style: normal;   
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding-top: 10px;
+}
+
+.top-icons {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+}
+
+.style-left {
+    margin-top: 30px;
+    background-color: #C6C4D0;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    font-size: 20px;
+    padding: 20px;
+    width: 30px;
+    border-radius: 20px;
+    height: 200px;
+    cursor: pointer;
+}
+
+.style-left i {
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.style-left i:hover {
+    border-radius: 8px;
+    font-size: 25px;
+    transform: scale(1.2);
+}
+
+.right-style {
+    background-color: #fff;
+    height: 36rem;
+    width: 85rem;
+    margin-left: 30px;
+    border-radius: 20px;
+    margin-top: 30px;
+}
+
+.style {
+    display: flex;
+    
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    font-size: 25px;
+    gap: 16px;
+    margin-bottom: -170px;
+    position: relative;
+    top: -100px;
+    left: -25px;
+    margin-left: 25px;
+    height: 80px;
+    width: 50px;
+    padding-top: 10px;
+    padding-left: 20px;
+    border-radius: 24px;
+    background-color: #C6C4D0;
+}
+
+.dashboard {
+    height: 100vh;
+    width: 100%;
+}
+
+.icons {
+    cursor: pointer;
+}
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* Apply the fade-out class */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+select {
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    width: 14rem;
+    border: none;
+    margin: 2rem;
+    outline: none;
+    border-radius: 1rem;
+   
+}
+
+select, option #title {
+    background-color: #CED2DE;
+}
+
+.container {
+    width: 250px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #d3d6e1;
+}
+.title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+.input-container {
+    margin-top: 10px;
+}
+.input-container input {
+    width: 100%;
+    padding: 25px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.container2 {
+    width: 250px;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #d3d6e1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.title2 {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+.input-container2 {
+    background-color: #fff;
+    padding: 23px;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+.input-container2 input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.progress {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+    padding-top: 3rem;
+}
+
+.task-done {
+    margin-top: 1.5rem;
+}
+.details {
+    margin-top: 1.1rem;
+}
+
+.progress-bar {
+    width: 70%;
+    height: 30px;
+    background-color: #dfd4d4;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 10rem;
+    margin-left: 10rem;
+  }
+  
+  .progress-fill {
+    width: 50%;
+    height: 100%;
+    background-color: #4CAF50;
+  }
+
+  #progress {
+    margin-top: 4rem;
+  }

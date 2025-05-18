@@ -1,0 +1,27 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Employee Details</title>
+    <link rel="stylesheet" href="{% static 'update_details.css' %}">
+
+  
+</head>
+<body>
+    <div class="container">
+        <h1>Update Employee Details</h1>
+        <form action="{% url 'update_employee' id=employee.id %}" method="POST">
+            {% csrf_token %}
+            <label for="update_employee_email">Email:</label>
+            <input type="email" id="update_employee_email" name="update_employee_email" value="{{ employee.add_employee_email }}" required>
+            <label for="update_employee_username">Username:</label>
+            <input type="text" id="update_employee_username" name="update_employee_username" value="{{ employee.add_employee_username }}" required>
+            <label for="update_employee_password">Password:</label>
+            <input type="password" id="update_employee_password" name="update_employee_password" value="{{ employee.add_employee_password }}" required>
+            <input type="submit" value="Update">
+        </form>
+    </div>
+</body>
+</html>

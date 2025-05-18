@@ -1,0 +1,203 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAT</title>
+    <link rel="stylesheet" href="{% static 'client-chat.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        // Function to handle form submission via AJAX
+function submitForm(event) {
+    event.preventDefault(); // Prevent default form submission
+    let formData = new FormData(event.target); // Get form data
+
+    fetch('/BD/BD_chat/BD1/', {
+        method: 'POST',
+        body: formData,
+        headers: {
+            'X-CSRFToken': getCookie('csrftoken') // Include CSRF token
+        }
+    })
+    .then(response => {
+        if (response.ok) {
+            // Handle success (optional)
+            console.log('Message and file uploaded successfully.');
+            // Optionally, update messages list or perform other actions
+        } else {
+            // Handle errors (optional)
+            console.error('Failed to upload message and file.');
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+}
+
+// Function to get CSRF token from cookies
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+
+// Attach submitForm function to form submission event
+document.getElementById('your-form-id').addEventListener('submit', submitForm);
+
+    </script>
+<body>
+    <div class="dashboard">
+        <div class="header">
+            <div class="tag">SAINWORK</div>
+            <div class="top-icons">
+                <i class="fa fa-github" aria-hidden="true"></i>
+                <i class="fa fa-bell" aria-hidden="true"></i>
+                <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+            </div>
+        </div>
+
+        <div class="style">
+            <div class="style-left">
+                <a id="anchor" href="dashboard1.html" target="chat">
+                    <div class="icons">
+                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                        <p>DASHBOARD</p>
+                    </div>
+                </a>
+                <a id="anchor" href="managers.html" target="chat">
+                    <div class="icons">
+                        <i class="fa fa-comments-o" aria-hidden="true"></i>
+                        <p>CHAT</p>
+                    </div>
+                </a>
+                <a id="anchor" href="bd-comments.html" target="chat">
+                    <div class="icons">
+                        <i class="fa fa-commenting-o" aria-hidden="true"></i>
+                        <p>COMMENTS</p>
+                    </div>
+                </a>
+                <a id="anchor" href="bd-team.html" target="chat">
+                    <div class="icons">
+                        <i class="fa fa-user-plus" aria-hidden="true"></i>
+                        <p>REVIEWS</p>
+                    </div>
+                </a>
+                <a id="anchor" href="{% url 'submission' username %}" target="chat">
+                    <div class="icons">
+                        <i class="fa fa-envelope-open-o" aria-hidden="true"></i>
+                        <p>SUBMISSION</p>
+                    </div>
+                </a>
+                <a id="anchor" href="bd-history.html" target="chat">
+                    <div class="icons">
+                        <i class="fa fa-history" aria-hidden="true"></i>
+                        <p>HISTORY</p>
+                    </div>
+                </a>
+            </div>
+
+            <div class="right-style">
+                <div class="chat-style">
+                    <div class="style-center">
+                        <div class="search">
+                            <input placeholder="search">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                    <div class="button-group">
+                        <button onclick="document.location='managers.html'" class="button active">Managers</button>
+                        <button onclick="document.location='client.html'" class="button">Clients</button>
+                        <button onclick="document.location='QA_bd.html'" class="button">QA</button>
+                    </div>
+                    
+                    
+                    <div class="groups">
+                        <div class="users">
+                            <div class="user">
+                                {% for client in clients %}
+    <div class="users">
+        <div class="user">
+            {% if client.profile_picture %}
+            <img src="{% static '{{ client.profile_picture.url }}' %}" alt="{{ client.client_login_username }}" class="profile-picture">
+            {% else %}
+            <i class="fa fa-user-circle" aria-hidden="true"></i>
+            {% endif %}
+        </div>
+        <div class="info">
+            <h3>{{ client.client_login_username }}</h3>
+        </div>
+    </div>
+    <hr/>
+    {% empty %}
+    <p>No clients available.</p>
+    {% endfor %}
+                    </div>
+                </div>
+            </div>
+                    
+                </div>
+            </div>
+                       
+
+            <div class="chat-container">
+                <div id="chat-box" class="chat-box">
+                    {% if messages_list %}
+                    {% for message in messages_list %}
+                        <div class="message">
+                            {% if 'message' in message.data %}
+                                <p>{{ message.data.username_fb }}: {{ message.data.message }}</p>
+                            {% endif %}
+                            {% if 'file' in message.data %}
+                                <div>
+                                    {% if message.data.file.is_image %}
+                                        <p>{{ message.data.username_fb }}:
+                                            <br>
+                                            <br>
+                                            <img src="{{ message.data.file.url }}" alt="Uploaded Image" style="max-width: 100%; height: auto;">
+                                    {% else %}
+                                        <br>
+                                        <br>
+                                        <p>{{ message.data.username_fb }}: <a href="{{ message.data.file.url }}" target="_blank">{{ message.data.file.name }}</a></p>
+                                    {% endif %}
+                                </div>
+                            {% endif %}
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    <p>No messages available.</p>
+                {% endif %}
+                
+                </div>
+                <form id="chat-form" class="chat-form" method="POST" enctype="multipart/form-data" action="{% url 'save_BD_msg' username=username %}">
+                    {% csrf_token %}
+                    <div class="flex">
+                    <div class="form-group">
+                        <textarea id="BD_msg" name="BD_msg" class="chat-input" placeholder="Enter your message"></textarea>
+                    </div>
+                    <div class="form-group file-upload-group">
+                        <label for="BD_file" class="file-upload-label">
+                            <i class="fa fa-paperclip" aria-hidden="true"></i>
+                        </label>
+                        <input type="file" id="BD_file" name="BD_file" class="file-upload">
+                    </div>
+                </div>
+                    <button type="submit" class="chat-send-button"><i class="fa fa-paper-plane"></i> Submit</button>
+                </form>
+                
+        </div>
+    </div>
+</body>
